@@ -20,10 +20,10 @@ User Display Name:  User D.
 //	MOVE DB
 ///////////////////
 
-Old domain Name: www.olddomainname.com / olddomainname.com
+Old domain Name: www.olddomainname.com / olddomainname.com  
 New domain Name: newdomainname.com
 
-UPDATE wp_options SET option_value = replace(option_value, 'www.olddomainname.com', 'newdomainname.com') WHERE option_name = 'home' OR option_name = 'siteurl';
-UPDATE wp_posts SET guid = replace(guid, 'www.olddomainname.com','newdomainname.com');
-UPDATE wp_posts SET post_content = replace(post_content, 'www.olddomainname.com', 'newdomainname.com');
-UPDATE wp_postmeta SET meta_value = REPLACE (meta_value, 'www.olddomainname.com','newdomainname.com');
+    UPDATE wp_options SET option_value = replace(option_value, 'www.olddomainname.com', 'newdomainname.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+    UPDATE wp_posts SET guid = replace(guid, 'www.olddomainname.com','newdomainname.com');
+    UPDATE wp_posts SET post_content = replace(post_content, 'www.olddomainname.com', 'newdomainname.com');
+    UPDATE wp_postmeta SET meta_value = REPLACE (meta_value, 'www.olddomainname.com','newdomainname.com');
