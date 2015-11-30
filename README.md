@@ -16,9 +16,8 @@ User Display Name:  User D.
     INSERT INTO `database_name`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '9999', 'wp_capabilities', 'a:1:{s:13:"administrator";s:1:"1";}');
     INSERT INTO `database_name`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '9999', 'wp_user_level', '10');
 
-////////////////////
-//	MOVE DB
-///////////////////
+
+##	MOVE DB
 
 Old domain Name: www.olddomainname.com / olddomainname.com  
 New domain Name: newdomainname.com
