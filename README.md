@@ -25,4 +25,4 @@ New domain Name: newdomainname.com
     UPDATE wp_postmeta SET meta_value = REPLACE (meta_value, 'www.olddomainname.com','newdomainname.com');
     
 ##### Bulk change post meta_key
-    UPDATE wp_postmeta SET meta_key = 'new_key_name' WHERE meta_key = 'old_key_name'
+    UPDATE wp_postmeta SET meta_key = 'new_key_name' WHERE meta_key = 'old_key_name';
