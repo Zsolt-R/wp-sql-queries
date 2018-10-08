@@ -29,7 +29,8 @@ New domain Name: newdomainname.com
 
 ##### Change WP database table prefix
 
-Step 1) RENAME ALL WORDPRESS DATABASE TABLES
+###### Step 1. RENAME ALL WORDPRESS DATABASE TABLES
+
     RENAME table `wp_commentmeta` TO `wp_ newprefix_commentmeta`;
     RENAME table `wp_comments` TO `wp_ newprefix_comments`;
     RENAME table `wp_links` TO `wp_ newprefix_links`;
@@ -43,8 +44,10 @@ Step 1) RENAME ALL WORDPRESS DATABASE TABLES
     RENAME table `wp_usermeta` TO `wp_ newprefix_usermeta`;
     RENAME table `wp_users` TO `wp_ newprefix_users`;
     
-Step 2) MODIFY THE OPTIONS TABLE
+###### Step 2. MODIFY THE OPTIONS TABLE
+
     SELECT * FROM `wp_ newprefix_options` WHERE `option_name` LIKE '%wp_%'
     
-Step 3) MODIFY THE USERMETA TABLE
+###### Step 3. MODIFY THE USERMETA TABLE
+
     SELECT * FROM `wp_ newprefix_usermeta` WHERE `meta_key` LIKE ‘%wp_%’
