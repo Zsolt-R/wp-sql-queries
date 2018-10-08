@@ -26,3 +26,25 @@ New domain Name: newdomainname.com
     
 ##### Bulk change post meta_key
     UPDATE wp_postmeta SET meta_key = 'new_key_name' WHERE meta_key = 'old_key_name';
+
+##### Change WP database table prefix
+
+Step 1) RENAME ALL WORDPRESS DATABASE TABLES
+    RENAME table `wp_commentmeta` TO `wp_ newprefix_commentmeta`;
+    RENAME table `wp_comments` TO `wp_ newprefix_comments`;
+    RENAME table `wp_links` TO `wp_ newprefix_links`;
+    RENAME table `wp_options` TO `wp_ newprefix_options`;
+    RENAME table `wp_postmeta` TO `wp_ newprefix_postmeta`;
+    RENAME table `wp_posts` TO `wp_ newprefix_posts`;
+    RENAME table `wp_terms` TO `wp_ newprefix_terms`;
+    RENAME table `wp_termmeta` TO `wp_ newprefix_termmeta`;
+    RENAME table `wp_term_relationships` TO `wp_ newprefix_term_relationships`;
+    RENAME table `wp_term_taxonomy` TO `wp_ newprefix_term_taxonomy`;
+    RENAME table `wp_usermeta` TO `wp_ newprefix_usermeta`;
+    RENAME table `wp_users` TO `wp_ newprefix_users`;
+    
+Step 2) MODIFY THE OPTIONS TABLE
+    SELECT * FROM `wp_ newprefix_options` WHERE `option_name` LIKE '%wp_%'
+    
+Step 3) MODIFY THE USERMETA TABLE
+    SELECT * FROM `wp_ newprefix_usermeta` WHERE `meta_key` LIKE ‘%wp_%’
